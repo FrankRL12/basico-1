@@ -9,8 +9,3 @@ python manage.py collectstatic --no-input
 python manage.py migrate
 
 # Variables de entorno para el superusuario
-SUPERUSER_USERNAME="admin"
-SUPERUSER_EMAIL="Adolfo95lopez95@gmail.com"
-SUPERUSER_PASSWORD="123456"
-
-echo "from django.contrib.auth import get_user_model; User = get_user_model(); User.objects.create_superuser('$SUPERUSER_USERNAME', '$SUPERUSER_EMAIL', '$SUPERUSER_PASSWORD')" | python manage.py shell
